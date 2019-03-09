@@ -5,8 +5,7 @@ const compOne = {
     <input ng-model="location"> 
     <button ng-click="$ctrl.search(location)">search</button>
     <section ng-repeat="places in $ctrl.posts track by $index">
-        <p>Author: {{places.name}} </p>
-        <p> City: {{ places.location.city}} </p>
+        <p>Author: {{places.restaurant.name}} </p>
     </section>
     `,
     controller: ["FoodService", function(FoodService) {
@@ -14,9 +13,8 @@ const compOne = {
         vm.search = function(location) {
             console.log(location)
             FoodService.searchRest(location).then((data) => {
-                vm.posts = data.data.restaurants[0].restaurant
+                vm.posts = data.data.restaurants
                 console.log(vm.posts)
-                console.log(vm.posts.location.city)  
             })
         }
     }]

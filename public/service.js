@@ -5,7 +5,7 @@ function FoodService($http) {
         console.log(location)
         return $http({
             method: "GET",
-            url: `https://developers.zomato.com/api/v2.1/search?entity_type=city&q=Bucharest
+            url: `https://developers.zomato.com/api/v2.1/search?entity_type=city&q=${location}
             `,
             headers: {
                 "user-key": "542769761b546b1e16b0443af117653d"
