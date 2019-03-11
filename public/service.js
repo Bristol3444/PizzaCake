@@ -1,7 +1,7 @@
 "use strict"
-function FoodService($http) {
+function FoodService($http, $location) {
     const self = this;
-    self.searchRest = (location) => {
+    self.searchRestID = (location) => {
         console.log(location)
         return $http({
             method: "GET",
@@ -14,12 +14,21 @@ function FoodService($http) {
             
         }).then((data) => {
             self.jsonPayload = data;
-            console.log(self.jsonPayload)
+            self.cityID = self.jsonPayload.data.location_suggestions[0].entity_id
+            console.log(self.cityID)
+            $location.path("/comptwo")
+
             return self.jsonPayload
         })
     }
 
-    self.searchFood = (posts) => {
+    self.getcityID = () => {
+        return self.cityID
+    }
+
+    
+    
+    self.searchRest = (posts) => {
         console.log(posts, "this is posts")
         return $http({
             method: "GET",
@@ -27,15 +36,14 @@ function FoodService($http) {
             `,
             headers: {
                 "user-key": "542769761b546b1e16b0443af117653d"
-            },
-    
-            
-        }).then((moredata) => {
-            self.jsonPayloadSecond = moredata;
-            console.log(self.jsonPayloadSecond, "jsonPayloadSecond")
-            return self.jsonPayloadSecond
+            }            
+        }).then((moredata2) => {
+            self.jsonPayloadThird = moredata2;
+            console.log(self.jsonPayloadThird, "jsonPayloadThird")
+            return self.jsonPayloadThird
         })
     }
+    
 }
 
 angular 
