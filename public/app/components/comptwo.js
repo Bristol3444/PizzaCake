@@ -4,13 +4,14 @@ const compTwo = {
     template: 
     `
     <p>hello</p>
+    <button ng-click="$ctrl.finalSearch()">Submit</button>
     <div class="image2" ng-repeat="item in $ctrl.photosArray track by $index">
         <p>{{item.cuisine}}</p>
         <button>-</button>
         <button value="{{item.cuisineID}}" ng-click="$ctrl.addItem(item.cuisineID)">+</button>
     </div>
     `,
-    controller: ["FoodService", "$location", "$rootScope", function(FoodService, $location, $rootScope) {
+    controller: ["FoodService", "$location", "$rootScope", function(FoodService, $location) {
         const vm = this;
 
         vm.photosArray = [
@@ -98,7 +99,7 @@ const compTwo = {
         
         vm.finalSearch = function() {
 
-            FoodService.searchRest(vm.posts).then((moredata2) => {
+            FoodService.searchRest(vm.posts, vm.cuisineArray[0], vm.cuisineArray[1], vm.cuisineArray[2], vm.cuisineArray[3], vm.cuisineArray[4]).then((moredata2) => {
             vm.places = moredata2.data.restaurants
             console.log(moredata2.data, "moredata2")
         })
