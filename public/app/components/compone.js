@@ -1,8 +1,11 @@
 "use strict"
 const compOne = {
     template: `
-    <input ng-model="location" placeholder="please enter a city"> 
-    <button ng-click="$ctrl.search(location)">search</button>
+    <section class="landing__page">
+    <h3 class="app__title">Pizza Cake</h3>
+    <p class="app__info"> Make the decision to find a restaurant a piece of cake!</p>
+    <input class="location" ng-model="location" placeholder="please enter a city"> 
+    <button class="search__btn" ng-click="$ctrl.search(location)">Go!</button>
     <section ng-repeat="cuis in $ctrl.cuis track by $index">
         <p>cuisine_id: {{cuis.cuisine.cuisine_id}} </p>
         <p>cuisine_name: {{cuis.cuisine.cuisine_name}} </p>

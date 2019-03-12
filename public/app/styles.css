@@ -11,3 +11,52 @@ body {
     background-size: cover;
     background-position: center;
 }
+.landing__page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffccf;
+    height: 100vh;
+}
+.app__title {
+    font-family: 'Sniglet', cursive;
+    font-size: 3em;
+    color: #ec757b;
+}
+.app__info {
+    display: flex;
+    text-align: center; 
+    margin: 15px;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.5em;
+    color: #f3b0a0;
+}
+.location {
+    margin-top: 20px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #f3b0a0;
+    background-color: #fffccf;
+    color: #a23339;
+    font-size: 1.5em;
+}
+::-webkit-input-placeholder {
+    color: #a23339;
+}
+.search__btn {
+    font-family: 'Sniglet', cursive;
+    border: 3px solid #ec757b;
+    font-size: 2em;
+    margin-top: 50px;
+    background-color: #fffccf;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #ec757b;
+    border-radius: 25px;
+}
+.search__btn:hover {
+    background-color: #ec757b;
+    color: #fffccf;
+    box-shadow: 0 0 #ccc;
+}
