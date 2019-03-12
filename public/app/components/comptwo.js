@@ -88,6 +88,7 @@ const compTwo = {
             },
         ]
 
+//shuffling each of the objects in the array 
         function shuffle(arr) {
             let i 
             let j 
@@ -114,7 +115,7 @@ const compTwo = {
             console.log(vm.cuisineArray)
             console.log(vm.photosArray)
             vm.removeAPic(index)
-            if (cuisineArray.length = 5) {
+            if (vm.cuisineArray.length = 5) {
                 vm.finalSearch()
             }
         }

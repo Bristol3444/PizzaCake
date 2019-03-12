@@ -27,7 +27,8 @@ function FoodService($http, $location) {
     }
 
     
-    
+    //as soon as you choose item you want, it'll operate this search- restaurant thing
+    // takes you to comp three which will display your final cuisine restaurant results. 
     self.searchRest = (id, opt1, opt2, opt3, opt4, opt5) => {
         return $http({
             method: "GET",
@@ -38,6 +39,7 @@ function FoodService($http, $location) {
                 "user-key": "542769761b546b1e16b0443af117653d"
             }            
         }).then((moredata) => {
+            $location.path("/compthree")
             self.jsonPayload2 = moredata;
             console.log(self.jsonPayload2, "jsonPayloadTwo")
             return self.jsonPayload2

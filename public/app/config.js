@@ -10,5 +10,8 @@ angular
             .when("/comptwo", {
                 template: "<comp-two></comp-two>"
             })
+            .when("/compthree", {
+                template: "<comp-three></comp-three>"
+            })
             .otherwise("/compone")
     }])
