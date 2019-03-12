@@ -15,7 +15,7 @@ const compOne = {
 
 
 
-    controller: ["FoodService", "$location", "$rootScope", function(FoodService, $location, $rootScope) {
+    controller: ["FoodService", "$location", function(FoodService, $location) {
         const vm = this;
 
 

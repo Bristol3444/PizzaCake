@@ -12,7 +12,7 @@ const compTwo = {
         <button value="{{item.cuisineID}}" ng-click="$ctrl.addItem(item.cuisineID, $index)">+</button>
     </div>
     `,
-    controller: ["FoodService", "$location", "$rootScope", function(FoodService, $location) {
+    controller: ["FoodService", "$location", function(FoodService, $location) {
         const vm = this;
 
         vm.photosArray = [
@@ -87,9 +87,26 @@ const compTwo = {
             cuisine: `Lebanese`,
             },
         ]
-        vm.cuisineArray = []
 
-        vm.hide = false;
+        function shuffle(arr) {
+            let i 
+            let j 
+            let temp;
+            for (i = arr.length - 1; i > 0; i--) {
+                j = Math.floor(Math.random() * (i + 1));
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            return arr;
+        }
+
+        shuffle(vm.photosArray)
+        console.log(vm.photosArray)
+
+
+
+        vm.cuisineArray = []
 
         vm.addItem = function(item, index) {
             console.log(item)
@@ -97,6 +114,9 @@ const compTwo = {
             console.log(vm.cuisineArray)
             console.log(vm.photosArray)
             vm.removeAPic(index)
+            if (cuisineArray.length = 5) {
+                vm.finalSearch()
+            }
         }
 
         vm.discardItem = function(index) {
@@ -108,12 +128,12 @@ const compTwo = {
         }
 
 
-        vm.posts = FoodService.getcityID()
-        console.log(vm.posts)
+        vm.serviceCityId = FoodService.getcityID()
+        console.log(vm.serviceCityId)
         
         vm.finalSearch = function() {
 
-            FoodService.searchRest(vm.posts, vm.cuisineArray[0], vm.cuisineArray[1], vm.cuisineArray[2], vm.cuisineArray[3], vm.cuisineArray[4]).then((moredata2) => {
+            FoodService.searchRest(vm.serviceCityId, vm.cuisineArray[0], vm.cuisineArray[1], vm.cuisineArray[2], vm.cuisineArray[3], vm.cuisineArray[4]).then((moredata2) => {
             vm.places = moredata2.data.restaurants
             console.log(moredata2.data, "moredata2")
         })
