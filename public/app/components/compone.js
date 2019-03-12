@@ -23,12 +23,10 @@ const compOne = {
 
 
         vm.search = function(location) {
-            // $location.path("/comptwo")
             // console.log(location)
             FoodService.searchRestID(location).then((data) => {
                 console.log(data)
                 vm.posts = data.data.location_suggestions[0].entity_id
-                // $rootScope.$broadcast("passId", vm.posts)
                 
 
                 
