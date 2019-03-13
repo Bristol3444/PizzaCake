@@ -59,6 +59,7 @@ body {
     color: #ec757b;
     border-radius: 25px;
     outline: none;
+    width: 50%;
 }
 .search__btn:hover { 
     background-color: #ec757b;
@@ -79,6 +80,7 @@ body {
 .app__form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 
