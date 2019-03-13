@@ -10,7 +10,10 @@ const compThree = {
 
     `,
 
-    controller: ["FoodService", function(FoodSevice){
+    controller: ["FoodService", function(FoodService){
+        const vm = this
+        vm.serviceRestList = FoodService.getRestList()
+        console.log(vm.serviceRestList, "this is rest list")
 
 
 

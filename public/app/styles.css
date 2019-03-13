@@ -1,6 +1,5 @@
 body {
     margin: 0px;
-
 }
 
 .image2 {
@@ -40,6 +39,8 @@ body {
     background-color: #fffccf;
     color: #a23339;
     font-size: 1.5em;
+    outline: none;
+
 }
 ::-webkit-input-placeholder {
     color: #a23339;
@@ -54,9 +55,17 @@ body {
     padding-right: 30px;
     color: #ec757b;
     border-radius: 25px;
+    outline: none;
 }
 .search__btn:hover {
     background-color: #ec757b;
     color: #fffccf;
     box-shadow: 0 0 #ccc;
+}
+
+.load {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: white;
 }

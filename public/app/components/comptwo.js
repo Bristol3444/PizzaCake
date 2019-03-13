@@ -6,11 +6,14 @@ const compTwo = {
     // <button ng-click="$ctrl.finalSearch()">Submit</button>
     `
 
-    <div class="image2" ng-repeat="item in $ctrl.photosArray track by $index" ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)" ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)">
+    <section class="image2" ng-repeat="item in $ctrl.photosArray track by $index" ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)" ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)">
         <p>{{item.cuisine}}</p>
         <button ng-click="$ctrl.discardItem($index)">-</button>
         <button value="{{item.cuisineID}}" ng-click="$ctrl.addItem(item.cuisineID, $index)">+</button>
-    </div>
+    </section>
+    <section class="load" ng-if="$ctrl.loadIf">
+        <p>one sec please!</p>
+    </section>
     `,
     controller: ["FoodService", "$location", function(FoodService, $location) {
         const vm = this;
@@ -88,7 +91,7 @@ const compTwo = {
             },
         ]
 
-//shuffling each of the objects in the array 
+        //shuffles objects in photosArray
         function shuffle(arr) {
             let i 
             let j 
@@ -109,19 +112,30 @@ const compTwo = {
 
         vm.cuisineArray = []
 
+        // tracks if all selections have been made, if so ng-if on section element turns on as loading screen.
+        vm.loadIf = false
+
         vm.addItem = function(item, index) {
             console.log(item)
             vm.cuisineArray.push(angular.copy(item))
             console.log(vm.cuisineArray)
             console.log(vm.photosArray)
             vm.removeAPic(index)
-            if (vm.cuisineArray.length = 5) {
+            if (vm.cuisineArray.length == 5) {
+                vm.loadIf = true
+                vm.finalSearch()
+            } else if (vm.photosArray.length == 1) {
+                vm.loadIf = true
                 vm.finalSearch()
             }
         }
 
         vm.discardItem = function(index) {
             vm.removeAPic(index)
+            if (vm.photosArray.length == 1) {
+                vm.loadIf = true
+                vm.finalSearch()
+            }
         }
 
         vm.removeAPic = function(index) {
@@ -134,7 +148,14 @@ const compTwo = {
         
         vm.finalSearch = function() {
 
-            FoodService.searchRest(vm.serviceCityId, vm.cuisineArray[0], vm.cuisineArray[1], vm.cuisineArray[2], vm.cuisineArray[3], vm.cuisineArray[4]).then((moredata2) => {
+            FoodService.searchRest(
+                vm.serviceCityId, 
+                vm.cuisineArray[0], 
+                vm.cuisineArray[1], 
+                vm.cuisineArray[2], 
+                vm.cuisineArray[3], 
+                vm.cuisineArray[4])
+            .then((moredata2) => {
             vm.places = moredata2.data.restaurants
             console.log(moredata2.data, "moredata2")
         })

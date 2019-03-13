@@ -3,7 +3,7 @@ const compOne = {
     template: `
     <section class="landing__page">
     <h3 class="app__title">Pizza Cake</h3>
-    <p class="app__info"> Make the decision to find a restaurant a piece of cake!</p>
+    <p class="app__info"> Make your restaurant decision a piece of cake!</p>
     <input class="location" ng-model="location" placeholder="please enter a city"> 
     <button class="search__btn" ng-click="$ctrl.search(location)">Go!</button>
     <section ng-repeat="cuis in $ctrl.cuis track by $index">
