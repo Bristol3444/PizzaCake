@@ -5,7 +5,21 @@ function FoodService($http, $location) {
         console.log(location, "this is the location that the user input")
         return $http({
             method: "GET",
-            url: `https://developers.zomato.com/api/v2.1/locations?query=${location}
+            url: `http://open.mapquestapi.com/geocoding/v1/address?key=3rqR19yqhTyHROEORLXr6kGeWbUKlgKe&location=${location}
+            `
+            
+        }).then((data) => {
+            self.jsonPayload = data;
+            console.log(self.jsonPayload)
+            return self.jsonPayload
+        })
+    }
+
+    self.searchGeoCode = (latitude, longitude) => {
+        console.log(latitude, longitude, "this is the coords that the api returned based on location search")
+        return $http({
+            method: "GET",
+            url: `https://developers.zomato.com/api/v2.1/geocode?lat=${latitude}&lon=${longitude}
             `,
             headers: {
                 "user-key": "542769761b546b1e16b0443af117653d"
@@ -14,16 +28,16 @@ function FoodService($http, $location) {
             
         }).then((data) => {
             self.jsonPayload = data;
-            self.cityID = self.jsonPayload.data.location_suggestions[0].entity_id
-            console.log(self.cityID, "this is the city id that the API is returning")
+            console.log(self.jsonPayload)
             $location.path("/comptwo")
-
+            self.subzoneID = self.jsonPayload.data.location.entity_id
+            console.log(self.subzoneID, "subzone ID")
             return self.jsonPayload
         })
     }
 
-    self.getcityID = () => {
-        return self.cityID
+    self.getSubzoneID = () => {
+        return self.subzoneID
     }
 
     
@@ -34,7 +48,7 @@ function FoodService($http, $location) {
 
         return $http({
             method: "GET",
-            url: `https://developers.zomato.com/api/v2.1/search?count=3&entity_id=${id}&entity_type=city&cuisines=${opt1}%2C%20${opt2}%2C%20${opt3}%2C%20${opt4}%2C%20${opt5}&sort=rating&order=desc
+            url: `https://developers.zomato.com/api/v2.1/search?count=3&entity_id=${id}&entity_type=subzone&cuisines=${opt1}%2C%20${opt2}%2C%20${opt3}%2C%20${opt4}%2C%20${opt5}&sort=rating&order=desc
 
             `,
             headers: {

@@ -37,8 +37,11 @@ const compOne = {
             // console.log(location)
             FoodService.searchRestID(location).then((data) => {
                 console.log(data)
-                vm.posts = data.data.location_suggestions[0].entity_id
                 
+                vm.latitude = data.data.results[0].locations[0].displayLatLng.lat
+                vm.longitude = data.data.results[0].locations[0].displayLatLng.lng
+                console.log(vm.latitude, vm.longitude)
+                FoodService.searchGeoCode(vm.latitude, vm.longitude)
 
                 
 

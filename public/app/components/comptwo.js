@@ -147,14 +147,13 @@ const compTwo = {
             vm.photosArray.splice(index, 1)
         }
 
-
-        vm.serviceCityId = FoodService.getcityID()
-        console.log(vm.serviceCityId)
+        vm.serviceSubzoneID = FoodService.getSubzoneID()
+        console.log(vm.serviceSubzoneID, "this id was passed back from the service")
         
         vm.finalSearch = function() {
 
             FoodService.searchRest(
-                vm.serviceCityId, 
+                vm.serviceSubzoneID, 
                 vm.cuisineArray[0], 
                 vm.cuisineArray[1], 
                 vm.cuisineArray[2], 
