@@ -4,9 +4,9 @@ body {
 }
 
 .image2 {
-    background-color: #fffccf;
+    background-color: white;
     position: absolute;
-    width: 100%;
+    width: 75%;
     height: 400px;
     background-size: cover;
     background-position: center;
