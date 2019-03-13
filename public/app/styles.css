@@ -57,7 +57,7 @@ body {
     border-radius: 25px;
     outline: none;
 }
-.search__btn:hover {
+.search__btn:hover { 
     background-color: #ec757b;
     color: #fffccf;
     box-shadow: 0 0 #ccc;
@@ -68,4 +68,12 @@ body {
     height: 100vh;
     position: absolute;
     background-color: white;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+    .landing__page {
+        font-size: 2em;
+    }
 }

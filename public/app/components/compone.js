@@ -4,7 +4,7 @@ const compOne = {
     <section class="landing__page">
     <h3 class="app__title">Pizza Cake</h3>
     <p class="app__info"> Make your restaurant decision a piece of cake!</p>
-    <input class="location" ng-model="location" placeholder="please enter a city"> 
+    <input class="location" ng-model="location" ng-attr-placeholder="{{$ctrl.placeholder}}" ng-focus="$ctrl.placeholder =  ''" ng-blur="$ctrl.placeholder = 'Enter Your City'"> 
     <button class="search__btn" ng-click="$ctrl.search(location)">Go!</button>
     <section ng-repeat="cuis in $ctrl.cuis track by $index">
         <p>cuisine_id: {{cuis.cuisine.cuisine_id}} </p>
@@ -20,6 +20,7 @@ const compOne = {
 
     controller: ["FoodService", "$location", function(FoodService, $location) {
         const vm = this;
+        vm.placeholder = "Enter Your City";
 
 
 
