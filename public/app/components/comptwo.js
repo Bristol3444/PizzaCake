@@ -1,20 +1,8 @@
 "use strict"
 
 const compTwo = {
-    template: 
-    // <p>hello</p>
-    // <button ng-click="$ctrl.finalSearch()">Submit</button>
-    `
-
-    <section class="image2" ng-repeat="item in $ctrl.photosArray track by $index" ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)" ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)">
-        <p>{{item.cuisine}}</p>
-        <button ng-click="$ctrl.discardItem($index)">-</button>
-        <button value="{{item.cuisineID}}" ng-click="$ctrl.addItem(item.cuisineID, $index)">+</button>
-    </section>
-    <section class="load" ng-if="$ctrl.loadIf">
-        <img src="/public/app/assets/loading.gif" alt="">
-    </section>
-    `,
+    templateUrl: "./components/comptwo.html"
+    ,
     controller: ["FoodService", "$location", function(FoodService, $location) {
         const vm = this;
 
