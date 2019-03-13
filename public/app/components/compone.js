@@ -4,7 +4,7 @@ const compOne = {
     <section class="landing__page">
     <h3 class="app__title">Pizza Cake</h3>
     <img class="logo" src="/public/app/assets/pizzacake.png">
-    <p class="app__info"> Make your restaurant decision a piece of cake!</p>
+    <div class="app__info"> Make your restaurant decision a piece of cake!</div>
     <input class="location" ng-model="location" ng-attr-placeholder="{{$ctrl.placeholder}}" ng-focus="$ctrl.placeholder =  ''" ng-blur="$ctrl.placeholder = 'Enter Your City'"> 
     <button class="search__btn" ng-click="$ctrl.search(location)" ng-disabled="!location">Go!</button>
     <section ng-repeat="cuis in $ctrl.cuis track by $index">
