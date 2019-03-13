@@ -35,12 +35,12 @@ const compTwo = {
             cuisine: `Chinese`,
             },
             {
-            photoHREF: `./assets/bbq.png`,
+            photoHREF: `./assets/bbq.jpg`,
             cuisineID: 193,
             cuisine: `BBQ`,
             },
             {
-            photoHREF: ``,
+            photoHREF: `./assets/Burger.jpeg`,
             cuisineID: 168,
             cuisine: `Burger`,
             },
@@ -70,7 +70,7 @@ const compTwo = {
             cuisine: `Steak`,
             },
             {
-            photoHREF: ``,
+            photoHREF: `./assets/Seafood.jpg`,
             cuisineID: 83,
             cuisine: `Seafood`,
             },
@@ -88,6 +88,11 @@ const compTwo = {
             photoHREF: `./assets/Lebanese.jpg`,
             cuisineID: 66,
             cuisine: `Lebanese`,
+            },
+            {
+            photoHREF: `./assets/breakfast.jpg`,
+            cuisineID: 182,
+            cuisine: `Breakfast`,
             },
         ]
 

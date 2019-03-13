@@ -34,7 +34,7 @@ function FoodService($http, $location) {
 
         return $http({
             method: "GET",
-            url: `https://developers.zomato.com/api/v2.1/search?entity_id=${id}&entity_type=city&cuisines=${opt1}%2C%20${opt2}%2C%20${opt3}%2C%20${opt4}%2C%20${opt5}&sort=rating&order=desc
+            url: `https://developers.zomato.com/api/v2.1/search?count=3&entity_id=${id}&entity_type=city&cuisines=${opt1}%2C%20${opt2}%2C%20${opt3}%2C%20${opt4}%2C%20${opt5}&sort=rating&order=desc
 
             `,
             headers: {
