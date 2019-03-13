@@ -12,7 +12,7 @@ const compTwo = {
         <button value="{{item.cuisineID}}" ng-click="$ctrl.addItem(item.cuisineID, $index)">+</button>
     </section>
     <section class="load" ng-if="$ctrl.loadIf">
-        <p>one sec please!</p>
+        <img src="/public/app/assets/loading.gif" alt="">
     </section>
     `,
     controller: ["FoodService", "$location", function(FoodService, $location) {
