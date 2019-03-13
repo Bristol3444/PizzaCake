@@ -5,14 +5,15 @@
 
 const compThree = {
     template: `
-    
     <section class="page__three">
-    <p>Hello</p>
-    <section class="rest__page" ng-repeat="rest in $ctrl.results track by $index" ng-style="{'background-color': 'Yellow'} ">
-        <p>{{rest.restaurant.name}}</p>
-        <button class="btn__lock">Go To Restaurant</button>
-        <button class="btn__delete" ng-click="$ctrl.nextRest($index)">Delete</button>
-    </section>
+        <div class="rest__info"">Based on your choices, here are the top 3 restaurants for you, in your area:</div>
+        <section class="rest__page" ng-repeat="rest in $ctrl.results track by $index" ng-style="{'background-color': 'Yellow'} ">
+            <p>{{rest.restaurant.name}}</p>
+            <section class="navigation">
+                <button class="btn__lock">Go To Restaurant</button>
+                <button class="btn__delete" ng-click="$ctrl.nextRest($index)">Next Option</button>
+            </section
+        </section>
     </section>
     `,
 

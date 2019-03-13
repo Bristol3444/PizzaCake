@@ -90,19 +90,28 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 75%;
     position: absolute;
+    top: 250px;
     z-index: 10;
 
 }
-
 .page__three {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
-
+.rest__info {
+    font-family: 'Sniglet', cursive; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    margin: 15%;
+    flex-wrap: wrap;
+    color: #ec757b;
+}
 
 @media only screen and (min-width: 600px) {
     .body {
