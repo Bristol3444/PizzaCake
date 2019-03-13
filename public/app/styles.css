@@ -18,6 +18,10 @@ body {
     background-color: #fffccf;
     height: 100vh;
 }
+.logo{
+    height: 200px;
+    width: 200px;
+}
 .app__title {
     font-family: 'Sniglet', cursive;
     font-size: 3em;
@@ -73,7 +77,24 @@ body {
 
 
 @media only screen and (min-width: 600px) {
+    .body {
+        margin: 0px;
+    }
     .landing__page {
+        display: flex;
+        flex-direction: column;
         font-size: 2em;
+        height: 100%;
+    }
+    .logo {
+        display: flex;
+        width: 350px;
+        height: 350px;
+    }
+    .app__title {
+        margin-bottom: 1px;
+    }
+    .search__btn {
+        margin-bottom: 70px;
     }
 }
