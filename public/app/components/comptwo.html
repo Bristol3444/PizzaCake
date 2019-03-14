@@ -1,24 +1,31 @@
 <section class="comp__two">
-    <div class="comp__two__choices">Choose five different types of food you're craving by swiping to the right! If you're not in the mood for something, swipe left</div>
-    <div class="choices__count">{{$ctrl.cuisineArray.length}}</div>
-    <section class="image2" ng-repeat="item in $ctrl.photosArray track by $index"
-        ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)"
-        ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)"
-        addclass
-        addclassb>
-        
-        <p>{{item.cuisine}}</p>
-        <button 
-        addclassc 
-        ng-click="$ctrl.discardItem($index)">
-        -</button>
 
-        <button 
-        addclassd 
-        ng-click="$ctrl.addItem(item.cuisineID, $index)">
-        +</button>
-        
-    </section>
+    
+
+    <div 
+    class="image__container">
+        <section class="image2" ng-repeat="item in $ctrl.photosArray track by $index"
+            ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)"
+            ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)"
+            addclass
+            addclassb>
+            
+            <div>{{item.cuisine}}</div>
+            <button 
+            addclassc 
+            ng-click="$ctrl.discardItem($index)">
+            -</button>
+
+            <button 
+            addclassd 
+            ng-click="$ctrl.addItem(item.cuisineID, $index)">
+            +</button>
+
+        </section>
+    </div>
+
+    <div class="choices__count">{{$ctrl.cuisineArray.length}}</div>
+
 </section>
 
 

@@ -8,7 +8,7 @@ const compTwo = {
 
         vm.photosArray = [
             {
-            photoHREF: `./assets/american.jpg`,
+            photoHREF: `https://media.giphy.com/media/HKEfXzOW3y0FO/giphy.gif`,
             cuisineID: 1,
             cuisine: `American`,
             },
@@ -18,57 +18,57 @@ const compTwo = {
             cuisine: `Greek`,
             },
             {
-            photoHREF: `./assets/Chinese.jpg`,
+            photoHREF: `https://media.giphy.com/media/GUPzQlo86V33y/giphy.gif`,
             cuisineID: 25,
             cuisine: `Chinese`,
             },
             {
-            photoHREF: `./assets/bbq.jpg`,
+            photoHREF: `https://media.giphy.com/media/xT39D2A6TB8D1Ce79C/giphy.gif`,
             cuisineID: 193,
             cuisine: `BBQ`,
             },
             {
-            photoHREF: `./assets/Burger.jpeg`,
+            photoHREF: `./assets/Burger.gif`,
             cuisineID: 168,
-            cuisine: `Burger`,
+            cuisine: `BURGER`,
             },
             {
-            photoHREF: `./assets/Thai.jpeg`,
+            photoHREF: `https://media.giphy.com/media/l1KsvN3aMHzVEe0MM/giphy.gif`,
             cuisineID: 95,
             cuisine: `Thai`,
             },
             {
-            photoHREF: `./assets/Pizza.jpg`,
+            photoHREF: `https://media.giphy.com/media/4ayiIWaq2VULC/giphy.gif`,
             cuisineID: 82,
             cuisine: `Pizza`,
             },
             {
-            photoHREF: `./assets/Mexican.jpg`,
+            photoHREF: `https://media.giphy.com/media/3o85xoylV5xyPr3Dd6/giphy.gif`,
             cuisineID: 73,
             cuisine: `Mexican`,
             },
             {
-            photoHREF: `./assets/Sandwich.jpg`,
+            photoHREF: `https://giphy.com/gifs/8Z2ZvSu2j5OgiKlfK9`,
             cuisineID: 304,
             cuisine: `Sandwich`,
             },
             {
-            photoHREF: `./assets/Steak.jpg`,
+            photoHREF: `https://media.giphy.com/media/3oFzm3EbWuLElALSDe/giphy.gif`,
             cuisineID: 141,
             cuisine: `Steak`,
             },
             {
-            photoHREF: `./assets/Seafood.jpg`,
+            photoHREF: `https://media.giphy.com/media/xT1R9MMaTxSYWMxyQE/giphy.gif`,
             cuisineID: 83,
             cuisine: `Seafood`,
             },
             {
-            photoHREF: `./assets/FastFood.jpg`,
+            photoHREF: `https://media.giphy.com/media/efgsSvAvMjOpy/giphy.gif`,
             cuisineID: 40,
             cuisine: `Fast Food`,
             },
             {
-            photoHREF: `./assets/Italian.jpeg`,
+            photoHREF: `https://media.giphy.com/media/oS2lkrdaq3a3m/giphy.gif`,
             cuisineID: 55,
             cuisine: `Italian`,
             }, 
@@ -78,7 +78,7 @@ const compTwo = {
             cuisine: `Lebanese`,
             },
             {
-            photoHREF: `./assets/breakfast.jpg`,
+            photoHREF: `https://media.giphy.com/media/Zg4qILH5OsVdm/giphy.gif`,
             cuisineID: 182,
             cuisine: `Breakfast`,
             },
@@ -133,6 +133,7 @@ const compTwo = {
             vm.removeAPic(index)
             if (vm.photosArray.length == 1) {
                 vm.loadIf = true
+                console.log("now")
                 vm.finalSearch()
             }
         }
