@@ -44,7 +44,7 @@ function FoodService($http, $location) {
     //as soon as you choose item you want, it'll operate this search- restaurant thing
     // takes you to comp three which will display your final cuisine restaurant results. 
     self.searchRest = (id, opt1, opt2, opt3, opt4, opt5) => {
-        console.log(id, "this is the city id passed to the searchrest method")
+
 
         return $http({
             method: "GET",

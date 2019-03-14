@@ -115,7 +115,7 @@ const compTwo = {
             // console.log(vm.cuisineArray)
             // console.log(vm.photosArray)
             vm.removeAPic(index)
-            setTimeout(vm.evaluateCuisineArray,1750) 
+            vm.evaluateCuisineArray()
         }
 
         vm.evaluateCuisineArray = function() {

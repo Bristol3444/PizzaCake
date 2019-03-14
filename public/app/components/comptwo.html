@@ -8,8 +8,16 @@
         addclassb>
         
         <p>{{item.cuisine}}</p>
-        <button ng-click="$ctrl.discardItem($index)">-</button>
-        <button value="{{item.cuisineID}}" ng-click="$ctrl.addItem(item.cuisineID, $index)">+</button>
+        <button 
+        addclassc 
+        ng-click="$ctrl.discardItem($index)">
+        -</button>
+
+        <button 
+        addclassd 
+        ng-click="$ctrl.addItem(item.cuisineID, $index)">
+        +</button>
+        
     </section>
 </section>
 

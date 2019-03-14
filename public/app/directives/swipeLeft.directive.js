@@ -5,9 +5,7 @@ function addclass() {
         restrict: "A",
         link: function($scope, $element, $attrs) {
             $element.on("swipeleft", function(){
-                console.log("click");
                 $element.addClass("animationLeft");
-         
             })
         }
     }
