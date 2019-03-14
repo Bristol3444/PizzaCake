@@ -127,7 +127,7 @@ const compTwo = {
                 vm.finalSearch()
             }
         }
-
+        
 
         vm.discardItem = function(index) {
             vm.removeAPic(index)
