@@ -3,7 +3,10 @@
     <div class="choices__count">{{$ctrl.cuisineArray.length}}</div>
     <section class="image2" ng-repeat="item in $ctrl.photosArray track by $index"
         ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)"
-        ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)">
+        ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)"
+        addclass
+        addclassb>
+        
         <p>{{item.cuisine}}</p>
         <button ng-click="$ctrl.discardItem($index)">-</button>
         <button value="{{item.cuisineID}}" ng-click="$ctrl.addItem(item.cuisineID, $index)">+</button>

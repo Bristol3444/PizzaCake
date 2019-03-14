@@ -3,7 +3,7 @@
 const compTwo = {
     templateUrl: "./components/comptwo.html"
     ,
-    controller: ["FoodService", "$location", function(FoodService, $location) {
+    controller: ["FoodService", "$location","$element", function(FoodService, $location, $element) {
         const vm = this;
 
         vm.photosArray = [
@@ -109,11 +109,16 @@ const compTwo = {
         vm.loadIf = false
 
         vm.addItem = function(item, index) {
-            console.log(item)
+            $element.addClass("animationLeft");
+            console.log("click")
             vm.cuisineArray.push(angular.copy(item))
-            console.log(vm.cuisineArray)
-            console.log(vm.photosArray)
+            // console.log(vm.cuisineArray)
+            // console.log(vm.photosArray)
             vm.removeAPic(index)
+            setTimeout(vm.evaluateCuisineArray,1750) 
+        }
+
+        vm.evaluateCuisineArray = function() {
             if (vm.cuisineArray.length == 5) {
                 vm.loadIf = true
                 vm.finalSearch()
@@ -123,6 +128,7 @@ const compTwo = {
             }
         }
 
+
         vm.discardItem = function(index) {
             vm.removeAPic(index)
             if (vm.photosArray.length == 1) {
@@ -130,6 +136,9 @@ const compTwo = {
                 vm.finalSearch()
             }
         }
+
+
+
 
         vm.removeAPic = function(index) {
             vm.photosArray.splice(index, 1)

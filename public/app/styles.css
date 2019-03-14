@@ -3,6 +3,27 @@ body {
     background-color: #fffccf;
 }
 
+.animationLeft.ng-animate {
+    transition: .5s all ease-in;
+}
+.animationLeft.ng-leave {
+    transform:translate(0, 0);
+}
+.animationLeft.ng-leave.ng-leave-active {
+    transform:translate(-400px, 50px);
+}
+
+.animationRight.ng-animate {
+    transition: .5s all ease-in;
+}
+.animationRight.ng-leave {
+    transform:translate(0, 0);
+}
+.animationRight.ng-leave.ng-leave-active {
+    transform:translate(400px, 50px);
+}
+
+
 .image2 {
     background-color: white;
     position: absolute;

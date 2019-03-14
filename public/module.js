@@ -1,2 +1,2 @@
 "use strict";
-angular.module("App", ["ngRoute", "ngTouch"]);
+angular.module("App", ["ngRoute", "ngTouch", "ngAnimate"]);
