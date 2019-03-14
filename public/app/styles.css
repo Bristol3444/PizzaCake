@@ -53,6 +53,14 @@ body {
     
 }
 
+.choices__count {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 3em;
+
+}
+
 .frame {
     position: absolute;
     top: 0px;
