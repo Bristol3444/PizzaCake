@@ -6,21 +6,18 @@
 const compThree = {
     template: `
     <section class="page__three">
-        <div class="rest__info"">Based on your choices, here are the top 3 restaurants for you, in your area:</div>
-        <section class="rest__page" ng-repeat="rest in $ctrl.results track by $index" ng-style="{'background-color': 'Yellow'} ">
-            <p>{{rest.restaurant.name}}</p>
-            <p> Cuisine Types: {{rest.restaurant.cuisines}}</p>
-            <p ng-if="rest.restaurant.price_range == 1">Price: $</p>
-            <p ng-if="rest.restaurant.price_range == 2">Price: $$</p>
-            <p ng-if="rest.restaurant.price_range == 3">Price: $$$</p>
-            <p ng-if="rest.restaurant.price_range == 4">Price: $$$$</p>
-            <p ng-if="rest.restaurant.price_range == 5">Price: $$$$$</p>
-            <p><a href="{{rest.restaurant.menu_url}}">Menu Link</a></p>
-
-            <p ng-show="rest.restaurant.has_online_delivery">Delivery: Yes</p>
-            <p ng-show="!rest.restaurant.has_online_delivery">Delivery: No</p>
+        <section class="rest__page" ng-repeat="rest in $ctrl.results track by $index" ng-style="{'background-color': '#ec757b'} ">
+            <div class="rest__name">{{rest.restaurant.name}}</div>
+            <div class="cuisine__type"> Cuisine Types: {{rest.restaurant.cuisines}}</div>
+            <div class="rest__price" ng-if="rest.restaurant.price_range == 1">Price: $</div>
+            <div class="rest__price" ng-if="rest.restaurant.price_range == 2">Price: $$</div>
+            <div class="rest__price" ng-if="rest.restaurant.price_range == 3">Price: $$$</div>
+            <div class="rest__price" ng-if="rest.restaurant.price_range == 4">Price: $$$$</div>
+            <div class="rest__price" ng-if="rest.restaurant.price_range == 5">Price: $$$$$</div>
+            <div class="rest__price" ng-show="rest.restaurant.has_online_delivery">Delivery: Yes</div>
+            <div class="rest__price" ng-show="!rest.restaurant.has_online_delivery">Delivery: No</div>
             <section class="navigation">
-                <button class="btn__lock">Go To Restaurant</button>
+                <button class="menu__btn"><a href="{{rest.restaurant.menu_url}}">Check Us Out!</a></p>
                 <button class="btn__delete" ng-click="$ctrl.nextRest($index)">Next Option</button>
             </section
         </section>

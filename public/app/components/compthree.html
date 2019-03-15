@@ -1,7 +1,7 @@
 <div class="flip"> 
     <div class="card" ng-class="{'flipped':isFlipped}" "> 
         
-        
+        <div class="rest__info"">Based on your choices, here are the top 3 restaurants for you, in your area:</div>
         <div class="face front"> 
             <section class="rest__page" ng-repeat="rest in $ctrl.results track by $index" ng-style="{'background-color': 'Yellow'} ">
                 <p>Cuisine Types: {{rest.restaurant.cuisines}}</p>

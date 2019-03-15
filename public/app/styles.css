@@ -1,8 +1,11 @@
 body {
+    min-width: 500px;
     margin: 0px;
     background-color: #fffccf;
 }
-
+a {
+    text-decoration: none;
+}
 .animationLeft.ng-animate {
     transition: .5s all ease-in;
 }
@@ -145,13 +148,6 @@ body {
 
 }
 
-
-
-
-
-
-
-
 ::-webkit-input-placeholder {
     color: #a23339;
 }
@@ -191,19 +187,39 @@ body {
 }
 
 .rest__page {
-    border: 1px solid black;
+    border: 1px solid #ec757b;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgb(165, 162, 162);
+    font-family: 'Arimo', sans-serif;
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     width: 75%;
+    height: 500px; 
     position: absolute;
-    top: 250px;
-
+    padding: 20px;
+}
+.rest__name {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+.cuisine__type {
+    font-size: 1.75em;
+    margin-bottom: 30px;
+}
+.rest__price {
+    font-size: 1.75em;
+    margin-bottom: 30px;
 }
 .page__three {
+    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 .rest__info {
     font-family: 'Sniglet', cursive; 
@@ -216,7 +232,21 @@ body {
     flex-wrap: wrap;
     color: #ec757b;
 }
-
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.menu__btn {
+    border: 1px solid #fffccf;
+    background-color: #fffccf;
+    color: #ec757b;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1em;
+}
 i {
     visibility: hidden;
 
@@ -277,6 +307,8 @@ i {
         flex-direction: row;
 
     }
-
+    .rest__page {
+        width: 500px;
+    }
     
 }
