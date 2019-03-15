@@ -10,7 +10,11 @@ const compThree = {
         <section class="rest__page" ng-repeat="rest in $ctrl.results track by $index" ng-style="{'background-color': 'Yellow'} ">
             <p>{{rest.restaurant.name}}</p>
             <p> Cuisine Types: {{rest.restaurant.cuisines}}</p>
-            <p>Price Range: {{rest.restaurant.price_range}}</p>
+            <p ng-if="rest.restaurant.price_range == 1">Price: $</p>
+            <p ng-if="rest.restaurant.price_range == 2">Price: $$</p>
+            <p ng-if="rest.restaurant.price_range == 3">Price: $$$</p>
+            <p ng-if="rest.restaurant.price_range == 4">Price: $$$$</p>
+            <p ng-if="rest.restaurant.price_range == 5">Price: $$$$$</p>
             <p><a href="{{rest.restaurant.menu_url}}">Menu Link</a></p>
 
             <p ng-show="rest.restaurant.has_online_delivery">Delivery: Yes</p>
