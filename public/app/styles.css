@@ -2,7 +2,6 @@
 
 
 body {
-    min-width: 500px;
     margin: 0px;
     background-color: #fffccf;
 }
@@ -81,11 +80,6 @@ a {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-
-
-
-
-    
 }
 
 .cuisine__label {
@@ -282,10 +276,17 @@ i {
         margin-bottom: 1px;
     }
     .image2 {
-
+        border: 15px solid white;
+        border-bottom: 70px solid white;
+        box-shadow: inset 0px 0px 0px 1px rgba(135,135,135,1),  0px 0px 7px -1px rgb(159, 159, 159);
+        width: 600px;
+        height: 70vh;
+        margin-top: 40px;
     }
     .image__container {
-
+        background-color: #ec757b;
+        display: flex;
+        flex-direction: row;
     }
     .rest__page {
     }
