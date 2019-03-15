@@ -1,3 +1,6 @@
+/* universal styles */
+
+
 body {
     min-width: 500px;
     margin: 0px;
@@ -6,6 +9,9 @@ body {
 a {
     text-decoration: none;
 }
+
+
+/* component 2 */
 .animationLeft.ng-animate {
     transition: .5s all ease-in;
 }
@@ -187,19 +193,14 @@ a {
 }
 
 .rest__page {
-    border: 1px solid #ec757b;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgb(165, 162, 162);
-    font-family: 'Arimo', sans-serif;
-    color: whitesmoke;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 75%;
-    height: 500px; 
-    position: absolute;
-    padding: 20px;
+    width: 460px;
+    min-width: 460px;
+    padding: 10px;
 }
 .rest__name {
     font-size: 3em;
@@ -214,30 +215,17 @@ a {
     margin-bottom: 30px;
 }
 .page__three {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .rest__info {
-    font-family: 'Sniglet', cursive; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 75%;
-    margin: 15%;
-    flex-wrap: wrap;
-    color: #ec757b;
+    
 }
 .navigation {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    margin-top: 20px;
-    margin-bottom: 0px;
+
 }
 .menu__btn {
     border: 1px solid #fffccf;
@@ -294,21 +282,12 @@ i {
         margin-bottom: 1px;
     }
     .image2 {
-        border: 15px solid white;
-        border-bottom: 70px solid white;
-        box-shadow: inset 0px 0px 0px 1px rgba(135,135,135,1),  0px 0px 7px -1px rgb(159, 159, 159);
-        width: 600px;
-        height: 70vh;
-        margin-top: 40px;
+
     }
     .image__container {
-        background-color: #ec757b;
-        display: flex;
-        flex-direction: row;
 
     }
     .rest__page {
-        width: 500px;
     }
     
 }
