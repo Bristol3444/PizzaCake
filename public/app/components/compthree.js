@@ -6,7 +6,7 @@
 const compThree = {
     template: `
     <section class="page__three">
-        <section class="rest__page" ng-repeat="rest in $ctrl.results | limitTo: 1 track by $index" ng-style="{'background-color': '#ec757b'} ">
+        <section class="rest__page leftAniInfo" ng-repeat="rest in $ctrl.results | limitTo: 1 track by $index" ng-style="{'background-color': '#ec757b'} ">
             <div class="rest__name">{{rest.restaurant.name}}</div>
             <div class="cuisine__type"> Cuisine Types: {{rest.restaurant.cuisines}}</div>
             <div class="rest__price" ng-if="rest.restaurant.price_range == 1">Price: $</div>

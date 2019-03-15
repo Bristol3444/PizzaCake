@@ -8,9 +8,8 @@ body {
 a {
     text-decoration: none;
 }
+/* ****************** */
 
-
-/* component 2 */
 .animationLeft.ng-animate {
     transition: .5s all ease-in;
 }
@@ -50,6 +49,17 @@ a {
     from { transform: translateX(0px);
         opacity: .25;  }
     to { transform: translateX(20px);
+        opacity: 1;
+    }
+}
+
+.leftAniInfo {
+    animation: leftAni 2s linear;
+  }
+@keyframes leftAni {
+    from { transform: translateX(50px);
+        opacity: .25;  }
+    to { transform: translateX(0px);
         opacity: 1;
     }
 }
