@@ -244,7 +244,20 @@ i {
     visibility: hidden;
 
 }
-
+a {
+    text-decoration: none;
+    color: #ec757b;
+}
+.btn__delete, .menu__btn {
+    background-color: white;
+    color: #ec757b;
+    border-radius: 20px;
+    font-size: 1em;
+    outline: none;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
 
 @media only screen and (min-width: 928px) {
     .fa-arrow-right {

@@ -17,8 +17,8 @@ const compThree = {
             <div class="rest__price" ng-show="rest.restaurant.has_online_delivery">Delivery: Yes</div>
             <div class="rest__price" ng-show="!rest.restaurant.has_online_delivery">Delivery: No</div>
             <section class="navigation">
-                <button class="menu__btn"><a href="{{rest.restaurant.menu_url}}">Check Us Out!</a></p>
-                <button class="btn__delete" ng-click="$ctrl.nextRest($index)">Next Option</button>
+                <a class="btn__delete" ng-click="$ctrl.nextRest($index)">Next Option</a>
+                <a class="btn__delete" href="{{rest.restaurant.menu_url}}">Check us out!</a>
             </section
         </section>
     </section>
