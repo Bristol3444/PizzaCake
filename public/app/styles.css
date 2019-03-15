@@ -202,7 +202,6 @@ body {
 
 }
 .page__three {
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -218,27 +217,29 @@ body {
     color: #ec757b;
 }
 
-.fa-arrow-left, .fa-arrow-right {
-    display: none;
-    color: #ec757b;
-    width: 100px;
-    height: 100px;
-    
+i {
+    visibility: hidden;
+
 }
+
 
 @media only screen and (min-width: 928px) {
     .fa-arrow-right {
+        visibility: visible;
         left: 35%;
         bottom: -374px;
         position: relative;
         font-size: 6em;
+        color: white;
     }
 
     .fa-arrow-left {
+        visibility: visible;
         right: 35%;
         bottom: -374px;
         position: relative;
         font-size: 6em;
+        color: white;
     }
 }
 
@@ -268,9 +269,10 @@ body {
         box-shadow: inset 0px 0px 0px 1px rgba(135,135,135,1),  0px 0px 7px -1px rgb(159, 159, 159);
         width: 600px;
         height: 70vh;
+        margin-top: 40px;
     }
     .image__container {
-        margin-top: 40px;
+        background-color: #ec757b;
         display: flex;
         flex-direction: row;
 
