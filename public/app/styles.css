@@ -3,7 +3,7 @@
 
 body {
     margin: 0px;
-    background-color: #fffccf;
+    background-color: #ec757b;
 }
 a {
     text-decoration: none;
@@ -266,7 +266,7 @@ i {
         display: flex;
         flex-direction: column;
         font-size: 1em;
-        height: 100%;
+        height: 100vh;
     }
     .logo {
         display: flex;
@@ -288,6 +288,10 @@ i {
         background-color: #ec757b;
         display: flex;
         flex-direction: row;
+    }
+    .page__three {
+        justify-content: flex-start;
+        padding-left: 50px;
     }
     .rest__page {
     }
