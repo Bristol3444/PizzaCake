@@ -4,7 +4,7 @@
         
         <div class="face front"> 
             <section class="rest__page" ng-repeat="rest in $ctrl.results track by $index" ng-style="{'background-color': 'Yellow'} ">
-                <p>{{rest.restaurant.name}}</p>
+                <p>Cuisine Types: {{rest.restaurant.cuisines}}</p>
                 <section class="navigation">
                     <button class="btn__lock">Go To Restaurant</button>
                     <button class="btn__delete" ng-click="$ctrl.nextRest($index)">Next Option
