@@ -7,6 +7,7 @@ body {
 }
 a {
     text-decoration: none;
+    color: #ec757b;
 }
 /* ****************** */
 
@@ -56,7 +57,7 @@ a {
 .leftAniInfo {
     animation: leftAni 2s linear;
   }
-@keyframes leftAni {
+@keyframes leftAniInfo {
     from { transform: translateX(50px);
         opacity: .25;  }
     to { transform: translateX(0px);
@@ -64,99 +65,44 @@ a {
     }
 }
 
-.comp__two {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.image__container {
-    background-color: #ec757b;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
-.image2 {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    transform: scale(1);
-    font-family: 'Poppins', sans-serif;
-    font-size: 3em;
-    color: white;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
-.cuisine__label {
-    padding-right: 10px;
-}
-
-.choices__count {
-    position: absolute;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: -70px;
-    color: black;
-    }
-
-.frame {
-    position: absolute;
-    top: 0px;
-    width: 110%;
-    left: -5%;
-    height: 550px;
-    display: flex;
-    justify-content: center;
-    border-radius: 3px;
-    box-shadow: 3px 2px 30px 6px rgba(145,145,145,0.75);
-    background-color: white;
-
-}
+/* START OF COMPONE */
 
 .landing__page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #fffccf;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .logo{
-    height: 200px;
-    width: 200px;
+    width: 250px;
 }
 .app__title {
     font-family: 'Sniglet', cursive;
-    font-size: 3em;
     color: #ec757b;
+    font-size: 3em;
 }
 .app__info {
-    display: flex;
-    text-align: center; 
-    font-family: 'Arimo', sans-serif;
-    font-size: 1.5em;
-    color: #f3b0a0;
+    color: #ec757b;
+    font-size: 1.25em;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+
+
+
 }
 .location {
+    width: 75%;
     margin: 10px;
-    text-align: center;
+    border-radius: 25px;
     border: none;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #f3b0a0;
-    background-color: #fffccf;
-    color: #a23339;
-    font-size: 1.5em;
     outline: none;
-    
-
+    padding: 10px;
+    font-size: 1.25em;
+    color: #a23339;
+    text-align: center;
 }
 
 ::-webkit-input-placeholder {
@@ -186,7 +132,6 @@ a {
     height: 100vh;
     position: absolute;
     background-color: #fffccf;
-    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,37 +139,71 @@ a {
 .app__form {
     display: flex;
     flex-direction: column;
+    width: 300px;
     align-items: center;
 }
 
-.rest__page {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
+/* END OF COMPONE */
+
+/* START OF COMPTWO */
+
+.comp__two {
     display: flex;
     flex-direction: column;
-    width: 460px;
-    min-width: 460px;
-    padding: 10px;
+    align-items: center;
 }
-.rest__name {
-    font-size: 3em;
-    margin-bottom: 30px;
-}
-.cuisine__type {
-    font-size: 1.75em;
-    margin-bottom: 30px;
-}
-.rest__price {
-    font-size: 1.75em;
-    margin-bottom: 30px;
-}
-.page__three {
-    height: 100vh;
+
+.image__container {
+    /* background-color: #ec757b; */
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.image2 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.cuisine__label {
+}
+
+.choices__count {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -70px;
+    color: black;
+}
+
+
+.rest__page {
+
+}
+.rest__name {
+
+}
+.cuisine__type {
+
+}
+.rest__price {
+
+}
+.page__three {
+
 }
 .rest__info {
     
@@ -233,71 +212,22 @@ a {
 
 }
 .menu__btn {
-    border: 1px solid #fffccf;
-    background-color: #fffccf;
-    color: #ec757b;
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 1em;
+
 }
 i {
-    visibility: hidden;
 
 }
 a {
-    text-decoration: none;
-    color: #ec757b;
+
 }
 .btn__delete, .menu__btn {
-    background-color: white;
-    color: #ec757b;
-    border-radius: 20px;
-    font-size: 1em;
-    outline: none;
-    padding: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-}
 
-@media only screen and (min-width: 928px) {
-    .fa-arrow-right {
-        visibility: visible;
-        left: 35%;
-        bottom: -374px;
-        position: relative;
-        font-size: 6em;
-        color: white;
-    }
-
-    .fa-arrow-left {
-        visibility: visible;
-        right: 35%;
-        bottom: -374px;
-        position: relative;
-        font-size: 6em;
-        color: white;
-    }
 }
 
 
 @media only screen and (min-width: 600px) {
-    .body {
-        margin: 0px;
-        height: 100vh;
-    }
-    .landing__page {
-        display: flex;
-        flex-direction: column;
-        font-size: 1em;
-        height: 100vh;
-    }
     .logo {
-        display: flex;
-        width: 300px;
-        height: 300px;
-    }
-    .app__title {
-        margin-bottom: 1px;
+        width: 350px;
     }
     .image2 {
         border: 15px solid white;
@@ -307,16 +237,4 @@ a {
         height: 70vh;
         margin-top: 40px;
     }
-    .image__container {
-        background-color: #ec757b;
-        display: flex;
-        flex-direction: row;
-    }
-    .page__three {
-        justify-content: flex-start;
-        padding-left: 50px;
-    }
-    .rest__page {
-    }
-    
 }
