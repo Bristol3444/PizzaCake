@@ -1,7 +1,7 @@
 "use strict"
 function FoodService($http, $location) {
     const self = this;
-    self.searchRestID = (location) => {
+    self.searchCoords = (location) => {
         console.log(location, "this is the location that the user input")
         return $http({
             method: "GET",
@@ -68,11 +68,35 @@ function FoodService($http, $location) {
     self.getRestList = () => {
         return self.restList
     }
+
+
+
+    // self.getMapCoord = () => {
+    //     return $http({
+    //         method: "GET",
+    //         url: `https://maps.googleapis.com/maps/api/js?key=AIzaSyBnGA89G8fGa7UikNT5RoQE5FvfSjCx2Vo
+    //         &callback=initMap
+    //         async defer`,
+    //     }).then((mapdata) => {
+    //         self.jsonPayload3 = mapdata;
+    //         console.log(self.jsonPayload3, "jsonPayload3")
+    //         self.restList = self.jsonPayload3
+    //         $location.path("/compthree")
+    //         return self.getMapCoord
+    //     })
+    // } 
+       
+
+
+ 
+    
     
 }
 
 angular 
     .module("App")
     .service("FoodService", FoodService);
+
+    
 
     

@@ -35,7 +35,7 @@ const compOne = {
         vm.search = function(location) {
             vm.loadIf = true
             // console.log(location)
-            FoodService.searchRestID(location).then((data) => {
+            FoodService.searchCoords(location).then((data) => {
                 console.log(data)
                 
                 vm.latitude = data.data.results[0].locations[0].displayLatLng.lat

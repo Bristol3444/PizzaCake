@@ -21,13 +21,20 @@ const compThree = {
                 <a class="btn__delete" href="{{rest.restaurant.menu_url}}">Check us out!</a>
             </section
         </section>
+
+        <iframe width="600" height="450" frameborder="0" style="border:0"
+        ng-src="{{$ctrl.iframesrc}}" allowfullscreen></iframe>
+
     </section>
     `,
-
-    controller: ["FoodService", "$location", function (FoodService, $location) {
-        const vm = this
+    
+    controller: ["FoodService", "$location", "$sce", function (FoodService, $location, $sce) {
+        const vm = this;
         vm.serviceRestList = FoodService.getRestList()
-
+        console.log("---", vm.serviceRestList);
+        vm.iframesrc = $sce.trustAsResourceUrl(  
+        `https://www.google.com/maps/embed/v1/place?q=${vm.serviceRestList.data.restaurants[0].restaurant.location.address}&key=AIzaSyBnGA89G8fGa7UikNT5RoQE5FvfSjCx2Vo`)
+        
         vm.results = vm.serviceRestList.data.restaurants
         // console.log(vm.results);
         // console.log(vm.serviceRestList.data.restaurants[0].restaurant.name, "this is rest list")
