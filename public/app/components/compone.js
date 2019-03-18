@@ -2,7 +2,7 @@
 const compOne = {
     template: `
     <section class="landing__page">
-    <div class="app__title">Pizza Cake</div>
+    <div class="app__title"><span class="pizza">Pizza</span><span class="cake">Cake</span></div>
     <img class="logo" src="/public/app/assets/pizzacake.png">
     <div class="app__info"> Make your restaurant decision a piece of cake!</div>
     <form class="app__form" ng-submit="$ctrl.search(location)">

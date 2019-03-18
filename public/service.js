@@ -69,22 +69,19 @@ function FoodService($http, $location) {
         return self.restList
     }
 
+    self.getPhotos = (url) => {
+        return $http({
+            method: "GET",
+            url: `${url}`           
+        }).then((moredata) => {
+            self.jsonPayload3 = moredata;
+            self.restList = self.jsonPayload3
+            console.log(jsonPayload3)
+            return self.jsonPayload3
 
+        })
+    }
 
-    // self.getMapCoord = () => {
-    //     return $http({
-    //         method: "GET",
-    //         url: `https://maps.googleapis.com/maps/api/js?key=AIzaSyBnGA89G8fGa7UikNT5RoQE5FvfSjCx2Vo
-    //         &callback=initMap
-    //         async defer`,
-    //     }).then((mapdata) => {
-    //         self.jsonPayload3 = mapdata;
-    //         console.log(self.jsonPayload3, "jsonPayload3")
-    //         self.restList = self.jsonPayload3
-    //         $location.path("/compthree")
-    //         return self.getMapCoord
-    //     })
-    // } 
        
 
 
