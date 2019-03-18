@@ -11,8 +11,11 @@ const compThree = {
         const vm = this;
         vm.serviceRestList = FoodService.getRestList()
         console.log("---", vm.serviceRestList);
+
         vm.iframesrc = 
+
         
+
         [
             $sce.trustAsResourceUrl(  
                 `https://www.google.com/maps/embed/v1/place?q=${vm.serviceRestList.data.restaurants[0].restaurant.location.address}&key=AIzaSyBnGA89G8fGa7UikNT5RoQE5FvfSjCx2Vo`),
@@ -25,6 +28,7 @@ const compThree = {
 
 
 
+
         vm.iframesrcPhoto = 
             $sce.trustAsResourceUrl(  
                 `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${vm.serviceRestList.data.restaurants[0].restaurant.location.address}&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&key=AIzaSyBnGA89G8fGa7UikNT5RoQE5FvfSjCx2Vo`)
@@ -32,6 +36,8 @@ const compThree = {
         FoodService.getPhotos(vm.iframesrcPhoto)
         
         vm.results = vm.serviceRestList.data.restaurants
+        
+        vm.mapCounter = 0
 
         vm.nextRest = (index) => {
             vm.results.splice(index, 1);
@@ -40,6 +46,7 @@ const compThree = {
                 $location.path("/compone")
 
             }
+            vm.mapCounter++
             console.log(vm.results);
         }
         vm.deliveryStatus = function(index) {

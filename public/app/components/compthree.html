@@ -54,13 +54,13 @@
                 </div>
                 
                 <section class="navigation">
-                    <a class="btn__delete" ng-click="$ctrl.nextRest($index)">Next Option</a>
-                    <a class="btn__delete" href="{{rest.restaurant.menu_url}}">Check us out!</a>
+                    <a class="btn__delete" ng-click="$ctrl.nextRest($index)" target="_blank">Next Option</a>
+                    <a class="btn__delete" href="{{rest.restaurant.menu_url}}" target="_blank">Check us out!</a>
                 </section>
             </div>
 
-            <iframe class="map" width="400" height="300" frameborder="0" style="border:0"
-            ng-src="{{$ctrl.iframesrc[$index]}}" allowfullscreen></iframe>
+            <iframe class="map" frameborder="0" style="border:0"
+            ng-src="{{$ctrl.iframesrc[$ctrl.mapCounter]}}" allowfullscreen></iframe>
 
 
         </section>

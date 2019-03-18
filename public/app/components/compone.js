@@ -17,7 +17,7 @@ const compOne = {
         <p>{{places.restaurant.name}}</p>
     </section>
     <section class="load" ng-if="$ctrl.loadIf">
-        <img src="/public/app/assets/loading.gif" alt="">
+        <div class="loader"></div>
     </section>
     `,
 

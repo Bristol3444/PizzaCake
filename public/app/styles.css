@@ -65,6 +65,20 @@ a {
     }
 }
 
+.loader {
+    border: 16px solid #ec757b ; /* Light grey */
+    border-top: 16px solid #56c2e8; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 /* START OF COMPONE */
 
 .landing__page {
@@ -196,15 +210,17 @@ a {
 }
 
 .map {
-
+    width: 50%;
+    min-width: 400px;
+    height: 300px;
 }
+
 
 .rest__page {
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     color: white;
     padding-left: 30px;
 }
@@ -227,10 +243,11 @@ a {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;  
+    min-width: 465px;  
 }
 .rest__info {
-    
+    font-size: 1rem;
 }
 .navigation {
 
@@ -245,10 +262,10 @@ a {
     font-size: 1rem;
     color: #ec757b;
     background-color: white;
-    padding: 5px;
+    padding: 0px;
 }
 .btn__delete, .menu__btn {
-
+    cursor: pointer;
 }
 
 
@@ -266,6 +283,13 @@ a {
     }
     .app__title {
         font-size: 3em;
+    }
+    .rest__page {
+        justify-content: center;
+    }
+    .rest__info {
+        font-size: 2em;
+
     }
 }
 
