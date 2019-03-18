@@ -8,6 +8,7 @@ body {
 a {
     text-decoration: none;
     color:white;
+    padding: 10px 20px;
 }
 /* ****************** */
 
@@ -293,12 +294,21 @@ a {
 i {
 
 }
-a {
+.btn__delete {
     font-size: 1rem;
     color: #ec757b;
     background-color: white;
-    padding: 0px;
+    padding: 1px 8px;
+    cursor: pointer;
+    border: 2px solid white;
+
 }
+
+.btn__delete:hover {
+    color: white;
+    background-color: #ec757b
+}
+
 .btn__delete, .menu__btn {
     cursor: pointer;
 }
@@ -347,8 +357,16 @@ a {
 .restart__btn {
     cursor: pointer;
     color: #56C2E8;
+    font-size: 1rem;
+    border: 2px solid white;
+    background-color: white;
     padding: 5px;
     margin-top: 10px;
+}
+
+.restart__btn:hover {
+    background-color: #56C2E8;
+    color: white;
 }
 
 @media only screen and (min-width: 600px) {
@@ -356,12 +374,18 @@ a {
         width: 350px;
     }
     .choices__count {
-        display: block;
+        display: flex;
+        justify-content: space-between;
         width: 100%;
         text-align: center;
         font-size: 1.75rem;
 
     }
+
+    .addDelete {
+        font-size: 3rem;
+    }
+
     .image2 {
         border-radius: 5px;
         border: 15px solid white;

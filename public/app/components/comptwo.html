@@ -5,19 +5,6 @@
     
 
     <div class="image__container">
-
-        
-
-        <section class="image2" ng-repeat="item in $ctrl.photosArray track by $index"
-            ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)"
-            ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)"
-            addclass
-            addclassb>
-            
-            <div class="cuisine__label">{{item.cuisine}}</div>
-
-            <div class="choices__count">{{$ctrl.cuisineArray.length}}</div>
-        </section>
         
             <section class="image2" ng-repeat="item in $ctrl.photosArray track by $index"
                 ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)"
@@ -30,7 +17,16 @@
                 </div>
                 <div class="cuisine__label">{{item.cuisine}}</div>
 
-                <div class="choices__count">Choices left: {{$ctrl.choicesLeft}}</div>
+                <div class="choices__count">
+                    <span 
+                    ng-click="$ctrl.discardItem($index)" 
+                    class="addDelete">
+                    -</span>
+                    <span>Choices left: {{$ctrl.choicesLeft}}</span>
+                    <span 
+                    ng-click="$ctrl.addItem(item.cuisineID, $index)" class="addDelete">
+                    +</span>                
+                </div>
             </section>
         
     </div>
