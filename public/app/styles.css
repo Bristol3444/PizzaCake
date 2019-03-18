@@ -12,7 +12,7 @@ a {
 /* ****************** */
 
 .animationLeft.ng-animate {
-    transition: .5s all ease-in;
+    transition: .5s;
 }
 .animationLeft.ng-leave {
     transform:translate(0, 0);
@@ -22,7 +22,7 @@ a {
 }
 
 .animationRight.ng-animate {
-    transition: .5s all ease-in;
+    transition: .5s;
     
 }
 .animationRight.ng-leave {
@@ -326,6 +326,7 @@ a {
 }
 
 .modal-content {
+    text-align: center;
     background-color: #56C2E8;
     width: 50%;
     height: 30%;
