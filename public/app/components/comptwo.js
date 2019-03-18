@@ -9,64 +9,84 @@ const compTwo = {
         vm.photosArray = [
             {
             photoHREF: `https://media.giphy.com/media/HKEfXzOW3y0FO/giphy.gif`,
+            cuisineID: 1,
             cuisine: `American?`,
             },
             {
             photoHREF: `./assets/Greek.gif`,
+            cuisineID: 156,
             cuisine: `Greek?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/3ofSBzhBtiMfTARUYw/giphy.gif`,
+            cuisineID: 25,
             cuisine: `Chinese?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/xT39D2A6TB8D1Ce79C/giphy.gif`,
+            cuisineID: 193,
             cuisine: `BBQ?`,
             },
             {
             photoHREF: `./assets/Burger.gif`,
+            cuisineID: 168,
             cuisine: `Burgers?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/3ohuAz5lUqtWU3SQvK/giphy.gif`,
+            cuisineID: 95,
             cuisine: `Thai?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/4ayiIWaq2VULC/giphy.gif`,
+            cuisineID: 82,
             cuisine: `Pizza?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/3o85xoylV5xyPr3Dd6/giphy.gif`,
+            cuisineID: 73,
             cuisine: `Mexican?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/8Z2ZvSu2j5OgiKlfK9/giphy.gif`,
+            cuisineID: 304,
             cuisine: `Sandwich?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/3oFzm3EbWuLElALSDe/giphy.gif`,
+            cuisineID: 141,
             cuisine: `Steak?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/xT1R9MMaTxSYWMxyQE/giphy.gif`,
+            cuisineID: 83,
             cuisine: `Seafood?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/efgsSvAvMjOpy/giphy.gif`,
+            cuisineID: 40,
             cuisine: `Fast Food?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/MU7DwSE5Ulla8/giphy.gif`,
+            cuisineID: 55,
             cuisine: `Italian?`,
             }, 
             {
             photoHREF: `https://media.giphy.com/media/piOeWEnyX6g4XjrizY/giphy.gif`,
+            cuisineID: 66,
             cuisine: `Lebanese?`,
             },
             {
             photoHREF: `https://media.giphy.com/media/Zg4qILH5OsVdm/giphy.gif`,
+            cuisineID: 182,
             cuisine: `Breakfast?`,
             },
+            {
+            photoHREF: 'https://media.giphy.com/media/8NWA4MlIkTZfy/giphy.gif',
+            cuisineID: 100,
+            cuisine: `Cake`
+            }
         ]
 
         //shuffles objects in photosArray
@@ -97,6 +117,7 @@ const compTwo = {
             $element.addClass("animationLeft");
             vm.choicesLeft--
             vm.cuisineArray.push(angular.copy(item))
+            console.log(item)
             vm.removeAPic(index)
             vm.evaluateCuisineArray()
         }
@@ -134,7 +155,7 @@ const compTwo = {
         console.log(vm.serviceSubzoneID, "this id was passed back from the service")
         
         vm.finalSearch = function() {
-
+            console.log(vm.cuisineArray)
             FoodService.searchRest(
                 vm.serviceSubzoneID, 
                 vm.cuisineArray[0], 

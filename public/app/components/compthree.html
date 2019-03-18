@@ -1,7 +1,9 @@
-<section class="page__three">
+
+
+
 
         
-        <section class="rest__page leftAniInfo" ng-repeat="rest in $ctrl.results | limitTo: 1 track by $index" ng-style="{'background-color': '#ec757b'} ">
+        <section class="rest__page leftAniInfo" ng-repeat="rest in $ctrl.results | limitTo: 3 track by $index" ng-style="{'background-color': '#ec757b'} ">
 
             <div class="rest__info">
 
@@ -65,7 +67,13 @@
 
         </section>
   
-
+        <div class="modal" ng-if="$ctrl.modal">
+            <div class="modal-content">
+                <div>You are way too indecisive.</div>
+                <button ng-click="$ctrl.restart()">Try again!</button>
+            </div>
+        </div>
+            
 
 </section>
 
