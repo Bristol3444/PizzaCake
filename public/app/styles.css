@@ -327,6 +327,14 @@ a {
 
     }
 
+    .arrow__container {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+    }
+
     .fas {
         color: white;
         margin-right: 30px;
@@ -336,15 +344,19 @@ a {
     }
 
     .fa-arrow-left {
+        position: absolute;
         margin-top: 260px;
         font-size: 150px;
-        margin-right: 400px;
+        left: 200px;
+  
 
     }
 
     .fa-arrow-right {
-        margin-top: 258px;
+        position: absolute;
+        margin-top: 260px;
         font-size: 150px;
+        right: 200px;
 
     
     }
