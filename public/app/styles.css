@@ -103,15 +103,17 @@ a {
 
 .app__info {
     color: #ec757b;
-    font-size: 1.25em;
+    font-size: 1.1em;
     padding: 5px;
     text-align: center;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
 
 
 }
 .location {
+    font-family: 'Poppins', sans-serif;
+
     background-color: #fffccf;
     border: none;
     border-bottom: 3px solid #ec757b;
@@ -120,16 +122,18 @@ a {
     outline: none;
     padding-top: 10px;
     padding-bottom: 5px;
-    font-size: 1.5em;
-    color: #a23339;
+    font-size: 1.3em;
+    color: #56c2e8;
     text-align: center;
 }
 
 ::-webkit-input-placeholder {
     color: #56c2e8;
+    font-family: 'Poppins', sans-serif;
+
 }
 .search__btn {
-    font-family: 'Sniglet', cursive;
+    font-family: 'Poppins', sans-serif;
     border: 3px solid #ec757b;
     font-size: 2em;
     background-color: #fffccf;
@@ -192,8 +196,9 @@ a {
     font-size: 3em;
     color: white;
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .cuisine__label {
@@ -207,6 +212,7 @@ a {
     left: 50%;
     bottom: -70px;
     color: black;
+    display: none;
 }
 
 .map {
@@ -230,6 +236,27 @@ a {
     font-size: 2em;
     padding-bottom: 10px;
 }
+.directions__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.directions, .directions2 {
+    color: black;
+    background-color: white;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 50px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+.directions {
+    width: 70%;
+}
+
 .rest__name {
 
 }
@@ -273,7 +300,15 @@ a {
     .logo {
         width: 350px;
     }
+    .choices__count {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.75rem;
+
+    }
     .image2 {
+        border-radius: 5px;
         border: 15px solid white;
         border-bottom: 70px solid white;
         box-shadow: inset 0px 0px 0px 1px rgba(135,135,135,1), 5px 6px 33px 0px #a8474c58;
