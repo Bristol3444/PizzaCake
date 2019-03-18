@@ -5,7 +5,9 @@
     
 
     <div class="image__container">
-        <i class="fas fa-arrow-left leftAni" data-fa-transform="grow-10" ></i>
+
+        
+
         <section class="image2" ng-repeat="item in $ctrl.photosArray track by $index"
             ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)"
             ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)"
@@ -16,6 +18,8 @@
 
             <div class="choices__count">{{$ctrl.cuisineArray.length}}</div>
         </section>
+        <i class="fas fa-arrow-left leftAni" data-fa-transform="grow-10" ></i>
+        
         <i class="fas fa-arrow-right rightAni"></i>
     </div>
 

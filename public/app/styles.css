@@ -276,7 +276,7 @@ a {
     .image2 {
         border: 15px solid white;
         border-bottom: 70px solid white;
-        box-shadow: inset 0px 0px 0px 1px rgba(135,135,135,1),  0px 0px 7px -1px rgb(159, 159, 159);
+        box-shadow: inset 0px 0px 0px 1px rgba(135,135,135,1), 5px 6px 33px 0px #a8474c58;
         width: 600px;
         height: 70vh;
         margin-top: 40px;
@@ -291,6 +291,29 @@ a {
         font-size: 2em;
 
     }
+
+    .fas {
+        color: white;
+        margin-right: 30px;
+        text-shadow: 1px 1px 2px #a8474c58, 0 0 1em #461e20f5, 0 0 0.2em #461e20f5;
+       
+        
+    }
+
+    .fa-arrow-left {
+        margin-top: 260px;
+        font-size: 150px;
+        margin-right: 900px;
+
+    }
+
+    .fa-arrow-right {
+        margin-top: 258px;
+        font-size: 150px;
+
+    
+    }
+
 }
 
 
