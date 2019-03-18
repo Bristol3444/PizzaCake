@@ -56,7 +56,7 @@ const compTwo = {
             cuisine: `Fast Food?`,
             },
             {
-            photoHREF: `https://media.giphy.com/media/oS2lkrdaq3a3m/giphy.gif`,
+            photoHREF: `https://media.giphy.com/media/MU7DwSE5Ulla8/giphy.gif`,
             cuisine: `Italian?`,
             }, 
             {
@@ -95,13 +95,13 @@ const compTwo = {
 
         vm.addItem = function(item, index) {
             $element.addClass("animationLeft");
-            console.log("click")
+            vm.choicesLeft--
             vm.cuisineArray.push(angular.copy(item))
-            // console.log(vm.cuisineArray)
-            // console.log(vm.photosArray)
             vm.removeAPic(index)
             vm.evaluateCuisineArray()
         }
+
+        vm.choicesLeft = 5
 
         vm.evaluateCuisineArray = function() {
             if (vm.cuisineArray.length == 5) {
