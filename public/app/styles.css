@@ -4,6 +4,7 @@
 body {
     margin: 0px;
     background-color: #ec757b;
+    min-width: 305px;
 }
 a {
     text-decoration: none;
@@ -194,6 +195,7 @@ a {
 
 .image2 {
     position: absolute;
+    min-width: 305px;
     width: 100%;
     height: 100vh;
     background-size: cover;
