@@ -6,7 +6,7 @@
 
     <div class="image__container">
         
-            <section class="image2" ng-repeat="item in $ctrl.photosArray track by $index"
+            <section class="image2" ng-cloak ng-repeat="item in $ctrl.photosArray track by item.cuisineID"
                 ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)"
                 ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)"
                 addclass

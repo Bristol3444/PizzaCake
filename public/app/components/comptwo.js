@@ -114,7 +114,6 @@ const compTwo = {
         vm.loadIf = false
 
         vm.addItem = function(item, index) {
-            $element.addClass("animationLeft");
             vm.choicesLeft--
             vm.cuisineArray.push(angular.copy(item))
             console.log(item)
