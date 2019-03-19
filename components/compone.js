@@ -3,7 +3,7 @@ const compOne = {
     template: `
     <section class="landing__page">
     <div class="app__title"><span class="pizza">Pizza</span><span class="cake">Cake</span></div>
-    <img class="logo" src="/public/app/assets/pizzacake.png">
+    <img class="logo" src="assets/pizzacake.png">
     <div class="app__info">End the arguments, let us choose!</div>
     <form class="app__form" ng-submit="$ctrl.search(location)">
         <input class="location" ng-model="location" ng-attr-placeholder="{{$ctrl.placeholder}}" ng-focus="$ctrl.placeholder =  ''" ng-blur="$ctrl.placeholder = 'Enter Your City'"> 
