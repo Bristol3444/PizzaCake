@@ -14,23 +14,29 @@ a {
 
 .animationLeft.ng-animate {
     transition: .5s;
+
 }
 .animationLeft.ng-leave {
     transform:translate(0, 0);
+    opacity: 1;
+
 }
 .animationLeft.ng-leave.ng-leave-active {
-    transform:translate(-600px, 50px) rotate(-40deg) scale(.2);
+    transform:translate(-600px, 50px) rotate(-20deg) scale(.4);
+    opacity: 0;
+
 }
 
 .animationRight.ng-animate {
     transition: .5s;
-    
 }
 .animationRight.ng-leave {
     transform:translate(0, 0);
+    opacity: 1;
 }
 .animationRight.ng-leave.ng-leave-active {
-    transform:translate(600px, 50px) rotate(40deg) scale(.2);
+    transform:translate(600px, 50px) rotate(20deg) scale(.2);
+    opacity: 0;
 }
 
 .leftAni {
@@ -200,6 +206,7 @@ a {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+    -webkit-transform-style: preserve-3d;
 }
 
 .cuisine__label {
@@ -379,6 +386,7 @@ i {
         width: 100%;
         text-align: center;
         font-size: 1.75rem;
+        align-items: center;
 
     }
 
@@ -405,6 +413,31 @@ i {
         font-size: 2em;
 
     }
+    .animationLeft.ng-animate {
+        transition: .5s;
+    
+    }
+    .animationLeft.ng-leave {
+        transform:translate(0, 0);
+    
+    }
+    .animationLeft.ng-leave.ng-leave-active {
+        transform:translate(-300px, 50px) rotate(-20deg) scale(.2);
+    
+    }
+    
+    .animationRight.ng-animate {
+        transition: .5s;
+        -webkit-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+    }
+    .animationRight.ng-leave {
+        transform:translate(0, 0);
+    }
+    .animationRight.ng-leave.ng-leave-active {
+        transform:translate(300px, 50px) rotate(20deg) scale(.2);
+    }
+
 
 }
 
