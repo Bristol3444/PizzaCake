@@ -1,0 +1,5 @@
+{
+    "name": "Pizza Cake",
+    "description": "Final project made with AngularJS and data from API's Zomato, Mapquest, and Google Maps to eliminate the arguements of where users want to eat based on their location and cuisine choices!",
+    "image": "heroku/nodejs"
+}

@@ -9,6 +9,8 @@ app.use(express.json());
 
 
 
-app.listen(8080, function() {
-    console.log("SHIT IS WORKINGGGG");
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+    console.log("SERVER IS RUNNING, PORT 8080");            
 });
+
