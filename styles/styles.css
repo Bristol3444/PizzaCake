@@ -234,7 +234,8 @@ a {
 
 .map {
     width: 50%;
-    min-width: 400px;
+    margin-right: 0;
+    min-width: 600px;
     height: 300px;
 }
 
@@ -245,13 +246,15 @@ a {
     display: flex;
     flex-direction: column;
     color: white;
-    padding-left: 30px;
+    
 }
 
 .rest__info {
     font-family: 'Poppins', sans-serif;
     font-size: 2em;
     padding-bottom: 10px;
+    text-align: center;
+    margin-top: 20px;
 }
 .directions__container {
     display: flex;

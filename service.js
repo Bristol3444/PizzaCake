@@ -5,7 +5,7 @@ function FoodService($http, $location) {
         console.log(location, "this is the location that the user input")
         return $http({
             method: "GET",
-            url: `http://open.mapquestapi.com/geocoding/v1/address?key=3rqR19yqhTyHROEORLXr6kGeWbUKlgKe&location=${location}
+            url: `https://open.mapquestapi.com/geocoding/v1/address?key=3rqR19yqhTyHROEORLXr6kGeWbUKlgKe&location=${location}
             `
             
         }).then((data) => {
