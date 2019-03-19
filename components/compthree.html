@@ -1,0 +1,94 @@
+
+
+
+
+        
+        <section class="rest__page" ng-repeat="rest in $ctrl.results | limitTo: 1 track by $index" ng-style="{'background-color': '#ec757b'} ">
+
+            <div class="rest__info">
+
+                <div class="rest__name">{{rest.restaurant.name}}</div>
+                <div 
+                class="cuisine__type">
+                Cuisine Types: {{rest.restaurant.cuisines}}
+                </div>
+                
+                <div 
+                class="rest__price" 
+                ng-if="rest.restaurant.price_range == 1">
+                Price: $
+                </div>
+                
+                <div 
+                class="rest__price" 
+                ng-if="rest.restaurant.price_range == 2">
+                Price: $$
+                </div>
+                
+                <div 
+                class="rest__price" 
+                ng-if="rest.restaurant.price_range == 3">
+                Price: $$$
+                </div>
+                
+                <div 
+                class="rest__price" 
+                ng-if="rest.restaurant.price_range == 4">
+                Price: $$$$
+                </div>
+                
+                <div 
+                class="rest__price" 
+                ng-if="rest.restaurant.price_range == 5">
+                Price: $$$$$
+                </div>
+                
+                <div 
+                class="rest__price" 
+                ng-show="rest.restaurant.has_online_delivery">
+                Delivery: Yes
+                </div>
+                
+                <div 
+                class="rest__price" 
+                ng-show="!rest.restaurant.has_online_delivery">
+                Delivery: No
+                </div>
+
+                <div>
+                User rating: {{rest.restaurant.user_rating.aggregate_rating}} out of 5
+                </div>
+                
+                <section class="navigation">
+                    <a class="btn__delete" ng-click="$ctrl.nextRest($index)" target="_blank">Next Option</a>
+                    <a class="btn__delete" href="{{rest.restaurant.menu_url}}" target="_blank">Check us out!</a>
+                </section>
+            </div>
+
+           
+            <iframe class="map" frameborder="0" style="border:0"
+            ng-src="{{$ctrl.iframesrc[$ctrl.mapCounter]}}" allowfullscreen></iframe>
+            
+
+
+        </section>
+  
+        <div class="modal" ng-if="$ctrl.modal">
+            <div class="modal-content">
+                <div>You are way too indecisive.</div>
+                <a class="restart__btn" ng-click="$ctrl.restart()">Try again!</a>
+            </div>
+        </div>
+
+        <div class="modal" ng-if="">
+            <div class="modal-content">
+                <div>Sorry no restaurants</div>
+                <a class="restart__btn" ng-click="$ctrl.restart()">Try again!</a>
+            </div>
+        </div>
+            
+
+</section>
+
+
+

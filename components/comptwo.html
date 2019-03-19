@@ -1,0 +1,43 @@
+
+
+<section class="comp__two">
+
+    
+
+    <div class="image__container">
+        
+            <section class="image2" ng-cloak ng-repeat="item in $ctrl.photosArray track by item.cuisineID"
+                ng-style="{'background-image': 'url(' + item.photoHREF + ')'}" ng-swipe-left="$ctrl.discardItem($index)"
+                ng-swipe-right="$ctrl.addItem(item.cuisineID, $index)"
+                addclass
+                addclassb>
+                <div class="directions__container">
+                    <div class="directions">Swipe five</div>
+                    <div class="directions2">that look tasty.</div>
+                </div>
+                <div class="cuisine__label">{{item.cuisine}}</div>
+
+                <div class="choices__count">
+                    <span 
+                    ng-click="$ctrl.discardItem($index)" 
+                    class="addDelete">
+                    -</span>
+                    <span>Choices left: {{$ctrl.choicesLeft}}</span>
+                    <span 
+                    ng-click="$ctrl.addItem(item.cuisineID, $index)" class="addDelete">
+                    +</span>                
+                </div>
+            </section>
+        
+    </div>
+    <div class="arrow__container">
+        <i class="fas fa-arrow-left leftAni" data-fa-transform="grow-10" ></i>
+        <i class="fas fa-arrow-right rightAni"></i>
+    </div>
+
+</section>
+
+
+<section class="load" ng-if="$ctrl.loadIf">
+        <div class="loader"></div>
+</section>
