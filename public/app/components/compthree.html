@@ -3,7 +3,7 @@
 
 
         
-        <section class="rest__page leftAniInfo" ng-repeat="rest in $ctrl.results | limitTo: 1 track by $index" ng-style="{'background-color': '#ec757b'} ">
+        <section class="rest__page" ng-repeat="rest in $ctrl.results | limitTo: 1 track by $index" ng-style="{'background-color': '#ec757b'} ">
 
             <div class="rest__info">
 
@@ -54,6 +54,10 @@
                 ng-show="!rest.restaurant.has_online_delivery">
                 Delivery: No
                 </div>
+
+                <div>
+                User rating: {{rest.restaurant.user_rating.aggregate_rating}} out of 5
+                </div>
                 
                 <section class="navigation">
                     <a class="btn__delete" ng-click="$ctrl.nextRest($index)" target="_blank">Next Option</a>
@@ -61,8 +65,10 @@
                 </section>
             </div>
 
+           
             <iframe class="map" frameborder="0" style="border:0"
             ng-src="{{$ctrl.iframesrc[$ctrl.mapCounter]}}" allowfullscreen></iframe>
+            
 
 
         </section>
