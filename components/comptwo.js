@@ -38,7 +38,7 @@ const compTwo = {
             cuisine: `Thai?`,
             },
             {
-            photoHREF: `https://media.giphy.com/media/4ayiIWaq2VULC/giphy.gif`,
+            photoHREF: `https://media.giphy.com/media/aCKMaeduKfFXG/giphy.gif`,
             cuisineID: 82,
             cuisine: `Pizza?`,
             },
