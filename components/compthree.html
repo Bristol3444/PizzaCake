@@ -2,7 +2,7 @@
 
 
 
-        
+    <section class="comp3__container">
         <section class="rest__page" ng-repeat="rest in $ctrl.results | limitTo: 1 track by $index" ng-style="{'background-color': '#ec757b'} ">
 
             <iframe class="map" frameborder="0" style="border:0"
@@ -75,9 +75,9 @@
 
         </section>
         
-        <section class="modal__container">
+        <section class="modal__container" ng-if="$ctrl.modal">
 
-            <div class="modal" ng-if="$ctrl.modal">
+            <div class="modal" >
                 <div class="modal-content">
                     <div>You are way too indecisive.</div>
                     <a class="restart__btn" ng-click="$ctrl.restart()">Try again!</a>
@@ -85,7 +85,7 @@
             </div>
         
         </section>
-
+    </section>
 
 
 

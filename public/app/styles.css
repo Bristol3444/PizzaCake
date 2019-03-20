@@ -1,10 +1,13 @@
 /* universal styles */
-
+html {
+    height: 100%;
+}
 
 body {
     margin: 0px;
     background-color: #ec757b;
     min-width: 305px;
+    height: 100%;
 }
 a {
     text-decoration: none;
@@ -380,6 +383,12 @@ i {
 .restart__btn:hover {
     background-color: #56C2E8;
     color: white;
+}
+
+.comp3__container {
+    display: inline-block;
+    width: 100%;
+    background-color: #ec757b;
 }
 
 @media only screen and (min-width: 600px) {
