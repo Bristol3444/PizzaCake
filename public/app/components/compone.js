@@ -6,7 +6,7 @@ const compOne = {
     <img class="logo" src="/public/app/assets/pizzacake.png">
     <div class="app__info">End the arguments, let us choose!</div>
     <form class="app__form" ng-submit="$ctrl.search(location)">
-        <input class="location" ng-model="location" ng-attr-placeholder="{{$ctrl.placeholder}}" ng-focus="$ctrl.placeholder =  ''" ng-blur="$ctrl.placeholder = 'Enter Your City'"> 
+        <input class="location" ng-model="location" ng-attr-placeholder="{{$ctrl.placeholder}}" ng-focus="$ctrl.placeholder =  ''" ng-blur="$ctrl.placeholder = 'Enter Your City and State'"> 
         <button class="search__btn" )" ng-disabled="!location">Go!</button>
     </form>
     <section ng-repeat="cuis in $ctrl.cuis track by $index">

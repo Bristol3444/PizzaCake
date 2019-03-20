@@ -403,6 +403,7 @@ i {
 
     .addDelete {
         font-size: 3rem;
+        cursor: pointer;
     }
 
     .image2 {

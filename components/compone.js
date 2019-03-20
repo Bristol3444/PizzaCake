@@ -7,7 +7,7 @@ const compOne = {
 
     controller: ["FoodService", "$location", function(FoodService, $location) {
         const vm = this;
-        vm.placeholder = "Enter Your City";
+        vm.placeholder = "City and State";
 
         vm.loadIf = false
 
