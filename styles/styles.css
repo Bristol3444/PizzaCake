@@ -3,7 +3,7 @@
 
 body {
     margin: 0px;
-    background-color: #ec757b;
+    background-color: #fffccf;
     min-width: 305px;
 }
 a {
@@ -97,7 +97,7 @@ a {
     justify-content: center;
 }
 .logo{
-    width: 250px;
+    width: 200px;
 }
 .logo__loader {
     width: 48px;
@@ -386,9 +386,7 @@ i {
 }
 
 @media only screen and (min-width: 600px) {
-    .logo {
-        width: 350px;
-    }
+
     .cuisine__type {
     }
     .choices__count {
