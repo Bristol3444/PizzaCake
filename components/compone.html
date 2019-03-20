@@ -1,5 +1,8 @@
 <section class="landing__page">
-    <div class="app__title"><span class="pizza">Pizza</span><span class="cake">Cake</span></div>
+    <div class="app__title">
+        <span class="pizza">Pizza</span>
+        <span class="cake">Cake</span>
+    </div>
     <img class="logo" src="./assets/pizzacake.png">
     <div class="app__info">End the arguments, let us choose!</div>
     <form class="app__form" ng-submit="$ctrl.search(location)">
@@ -14,5 +17,7 @@
         <p>{{places.restaurant.name}}</p>
     </section>
     <section class="load" ng-if="$ctrl.loadIf">
+        <img class="logo__loader" src="./assets/pizzacake.png">
         <div class="loader"></div>
     </section>
+</section>

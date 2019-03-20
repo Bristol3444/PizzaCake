@@ -101,9 +101,9 @@ a {
     width: 250px;
 }
 .logo__loader {
-    width: 48px;
-    position: absolute;
+    width: 100px;
 }
+
 .app__title {
     font-family: 'Poppins', sans-serif;
     color: #ec757b;
@@ -145,7 +145,6 @@ a {
 
 }
 .search__btn {
-    cursor: pointer;
     font-family: 'Poppins', sans-serif;
     border: 3px solid #ec757b;
     font-size: 2em;
@@ -239,8 +238,7 @@ a {
 
 .map {
     width: 50%;
-    margin-right: 0;
-    min-width: 600px;
+    min-width: 400px;
     height: 300px;
 }
 
@@ -251,15 +249,13 @@ a {
     display: flex;
     flex-direction: column;
     color: white;
-    
+    padding-left: 30px;
 }
 
 .rest__info {
     font-family: 'Poppins', sans-serif;
     font-size: 2em;
     padding-bottom: 10px;
-    text-align: center;
-    margin-top: 20px;
 }
 .directions__container {
     display: flex;
@@ -423,22 +419,18 @@ i {
         align-items: center;
     }
     .rest__info {
-        font-size: 1.25em;
+        font-size: 2em;
         z-index:20;
         background-color: #ec757b;
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-width: 300px;
         width: 40%;
         margin-top: 300px;
         border: 10px solid white;
         text-align: center;
         
 
-    }
-    .rest__name {
-        font-size: 1.75em;
     }
     .animationLeft.ng-animate {
         transition: .5s;
