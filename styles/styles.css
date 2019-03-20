@@ -9,7 +9,6 @@ body {
 a {
     text-decoration: none;
     color:white;
-    padding: 10px 20px;
 }
 /* ****************** */
 
@@ -238,9 +237,8 @@ a {
 }
 
 .map {
-    width: 50%;
+    width: 100%;
     margin-right: 0;
-    min-width: 600px;
     height: 300px;
 }
 
@@ -250,15 +248,13 @@ a {
     width: 100%;
     display: flex;
     flex-direction: column;
-    color: white;
-    
+    color: white;    
 }
 
 .rest__info {
     font-family: 'Poppins', sans-serif;
     font-size: 2em;
     padding-bottom: 10px;
-    text-align: center;
     margin-top: 20px;
 }
 .directions__container {
@@ -284,7 +280,7 @@ a {
 }
 
 .rest__name {
-
+    font-size: 1.75em;
 }
 .cuisine__type {
 }
@@ -300,9 +296,12 @@ a {
 }
 .rest__info {
     font-size: 1rem;
+    text-align: center;
 }
 .navigation {
-
+    padding-top: 10px;
+    width: 100%;
+    
 }
 .menu__btn {
 
@@ -314,7 +313,6 @@ i {
     font-size: 1rem;
     color: #ec757b;
     background-color: white;
-    padding: 1px 8px;
     cursor: pointer;
     border: 2px solid white;
 
@@ -322,11 +320,13 @@ i {
 
 .btn__delete:hover {
     color: white;
-    background-color: #ec757b
+    background-color: #ec757b;
 }
 
 .btn__delete, .menu__btn {
     cursor: pointer;
+    padding: 3px;
+    margin-right: 5px;
 }
 .arrow__container {
     position: absolute;
@@ -390,7 +390,6 @@ i {
         width: 350px;
     }
     .cuisine__type {
-        text-align: center;
     }
     .choices__count {
         display: flex;
@@ -422,23 +421,33 @@ i {
         display: flex;
         align-items: center;
     }
+
     .rest__info {
-        font-size: 1.25em;
-        z-index:20;
-        background-color: #ec757b;
+        text-align: left;
+        position: absolute;
+        z-index: 20;
+        background-color: #56C2E8;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         min-width: 300px;
         width: 40%;
-        margin-top: 300px;
-        border: 10px solid white;
-        text-align: center;
+        border: 10px solid #56C2E8;
+        top: 300px;
+        -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.31);
+        -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.31);
+        box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.31);
         
 
     }
     .rest__name {
         font-size: 1.75em;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        color: #56C2E8;
+        line-height: 35px;
+        margin-bottom: 10px;
     }
     .animationLeft.ng-animate {
         transition: .5s;
@@ -474,6 +483,14 @@ i {
     .rest__page {
         padding: 0;
         justify-content: flex-start;
+    }
+    .btn__delete {
+        color: #56C2E8;    
+    }
+    
+    .btn__delete:hover {
+        color: white;
+        background-color: #56C2E8
     }
 
 
