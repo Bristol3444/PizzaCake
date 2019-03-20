@@ -367,16 +367,16 @@ i {
     border: 3px solid white;
     font-family: 'Poppins', sans-serif;
     color: white;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .restart__btn {
     cursor: pointer;
     color: #56C2E8;
-    font-size: 1rem;
+    font-size: 1em;
     border: 2px solid white;
     background-color: white;
-    padding: 5px;
+    padding: 2px;
     margin-top: 10px;
 }
 
@@ -491,6 +491,10 @@ i {
     .btn__delete:hover {
         color: white;
         background-color: #56C2E8
+    }
+
+    .modal-content {
+        font-size: 1.5em;
     }
 
 
