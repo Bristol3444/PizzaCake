@@ -418,18 +418,22 @@ i {
         align-items: center;
     }
     .rest__info {
-        font-size: 2em;
+        font-size: 1.25em;
         z-index:20;
         background-color: #ec757b;
         display: flex;
         flex-direction: column;
         align-items: center;
+        min-width: 300px;
         width: 40%;
         margin-top: 300px;
         border: 10px solid white;
         text-align: center;
         
 
+    }
+    .rest__name {
+        font-size: 1.75em;
     }
     .animationLeft.ng-animate {
         transition: .5s;
